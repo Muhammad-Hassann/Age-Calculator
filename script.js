@@ -18,19 +18,24 @@ todayInput.value = dateString;
 
 calculateButton.addEventListener("click", function () {
   let birthday = new Date(birthdayInput.value);
+  if(birthday > today){
+    alert("Please enter a valid date. Your birthday cannot be in the future.")
+    return;
+  }
 
   let ageInMS = today.getTime() - birthday.getTime();
 
-  const years = Math.floor(ageInMS / (1000 * 60 * 60 * 24 * 365));
-  const months = Math.floor(
+  let years = Math.floor(ageInMS / (1000 * 60 * 60 * 24 * 365));
+  let months = Math.floor(
     (ageInMS % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30)
   );
-  const days = Math.floor(
+  let days = Math.floor(
     (ageInMS % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
   );
 
   days = days < 10 ? "0" + days : days;
   months = months < 10 ? "0" + months : months;
+  years = years < 10 ? "0" + years : years;
 
   yearDisplay.innerHTML = years;
   monthDisplay.innerHTML = months;
