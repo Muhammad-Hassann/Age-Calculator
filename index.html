@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="main" id="main">
+      <div class="calculator_container">
+        <div class="box_content" id="box_content">
+          <h1>Age Calculator</h1>
+          <label for="today">Today's Date</label>
+          <input type="text" readonly name="today" id="today" />
+          <label for="birthday">Your Birthday</label>
+          <input type="date" name="birthday" id="birthday" />
+          <button id="calculate_button">Calculate Age</button>
+          <div class="age_box" id="age_box">
+            <h1>Your Age</h1>
+            <div class="age">
+              <h2 id="year">00</h2>
+              <h2 id="month">00</h2>
+              <h2 id="day">00</h2>
+            </div>
+            <div class="bottom-text">
+              <h2>Years</h2>
+              <h2>Months</h2>
+              <h2>Days</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
